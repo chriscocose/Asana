@@ -12,12 +12,14 @@ namespace Asana.Library.Models
         public string? Description { get; set; }
         public int? Priority { get; set; }
         public bool? IsCompleted { get; set; }
-
         public int Id { get; set; }
+
+        public int ProjectId { get; set; }
+        public Project? Project { get; set; }
 
         public override string ToString()
         {
-            return $"[{Id}] {Name} - {Description}";
+            return $"[{Id}] {Name} - {Description} (Project ID: {ProjectId})";
         }
     }
 }
